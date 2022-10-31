@@ -1,22 +1,136 @@
-*,
-*:before,
-*:after {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: rgb(224, 224, 224);
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 15vw 0 5vw
+}
 
 .container {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -100px 0 0 -150px;
+  margin: 2vw 0;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
+}
+
+.container h1 {
+  margin: 2vh 0;
+  font-size: 70px;
+}
+
+.container button {
+  margin: 0 1vw;
+  padding: 10px;
+  -webkit-filter: brightness(100%);
+  border-radius: 5px;
+}
+
+.container button:hover {
+  -webkit-filter: brightness(65%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainpage {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 5vw;
+}
+
+.containeritem {
+  max-width: 400px;
+  background-color: rgb(235, 205, 205);
+  border-radius: 25px;
+  margin-bottom: 2vh;
+}
+
+.pictureimg {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  -webkit-filter: brightness(100%);
+}
+
+.pictureimg:hover {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.picturedata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  margin: 0 20px
+}
+
+.heart {
+  height: 8vh;
+}
+
+.likebar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.likebar h2 {
+  margin-right: 37px;
+  position: relative; bottom: 20px;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 370px;
+  margin: 15px;
+}
+
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer button {
+  margin: 0 1vw;
+  padding: 10px;
+  -webkit-filter: brightness(100%);
+  border-radius: 5px;
+}
+
+.footer button:hover {
+  -webkit-filter: brightness(65%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
