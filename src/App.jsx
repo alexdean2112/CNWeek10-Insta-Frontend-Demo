@@ -6,13 +6,14 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => {
 
-const [user, setUser] = useState()
+const [loggedUser, setLoggedUser] = useState()
+const [errorMsg, setErrorMsg] = useState()
 
   return (
     <Routes>
-      <Route path="/" element={<Register setter={setUser} />} />
+      <Route path="/" element={<Register setter={setLoggedUser} setter2={setErrorMsg} errorMsg={errorMsg}/>} />
       <Route path="/home" element={<Homepage />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/profile" element={<Profile loggeduser={loggedUser} setter2={setErrorMsg} errorMsg={errorMsg}/>} />
     </Routes>
   )
 }

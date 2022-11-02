@@ -1,10 +1,15 @@
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import ReadUsers from "./ReadUsers"
+import UpdatePassword from "./UpdatePassword";
+import UpdateEmail from "./UpdateEmail";
+import DeleteUser from "./DeleteUser";
 
 
-const Profile = () => {
 
+const Profile = ({loggeduser, setter2, errorMsg}) => {
+    
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -29,8 +34,21 @@ const Profile = () => {
 
     return (
         <div>
-            <Navbar />
-
+            <div>
+                <Navbar setter2={setter2} />
+            </div>
+            <div className="profilecontainer">
+                <div>
+                    <h1>Friends</h1>
+                    <ReadUsers />
+                </div>
+                <div>
+                    {errorMsg && (<h3>{errorMsg}</h3>)}
+                    <UpdatePassword loggeduser={loggeduser} setter2={setter2} errorMsg={errorMsg}/>
+                    <UpdateEmail loggeduser={loggeduser} setter2={setter2} errorMsg={errorMsg}/>
+                    <DeleteUser loggeduser={loggeduser} />
+                </div>
+            </div>
         </div>
     )
 }

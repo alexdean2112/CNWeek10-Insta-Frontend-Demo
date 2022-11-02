@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { createUser, loginUser } from "../utils/index"
 import { useNavigate } from "react-router-dom";
 
-const Register = ({setter}) => {
+const Register = ({setter, setter2, errorMsg}) => {
 
 const [username, setUsername] = useState("")
 const [email, setEmail] = useState("")
@@ -18,7 +18,9 @@ useEffect(() => {
         })
         const data = await response.json()
         if (data.token) {
+            setter({username: data.username})
             localStorage.setItem("token", data.token)
+            setter2("")
             navigate("/home")
         } 
     }
@@ -36,6 +38,7 @@ const submitHandler = async (event) => {
 
     if (user.token) {
         localStorage.setItem("token", user.token)
+        setter2("")
         navigate("/home")
     }
 }
@@ -45,7 +48,10 @@ const loginHandler = async (event) => {
     const user = await loginUser(username, email, password, setter)
     if (user.token) {
         localStorage.setItem("token", user.token)
+        setter2("")
         navigate("/home")
+    } else {
+        setter2(user.error)
     }
 }
 
@@ -57,24 +63,25 @@ return (
             </div>
             <div className="container" >
                 <h1>InstaFake</h1>
+                {errorMsg && (<h3>{errorMsg}</h3>)}
                 <form onSubmit={submitHandler}>
                     <label> Username:
                         <br></br>
-                        <input onChange={(event) => setUsername(event.target.value)} />
+                        <input onChange={(event) => setUsername(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")}/>
                     </label>
                     <br></br>
                     <br></br>
 
                     <label> Email:
                         <br></br>
-                        <input onChange={(event) => setEmail(event.target.value)} />
+                        <input onChange={(event) => setEmail(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
                     </label>
                     <br></br>
                     <br></br>
 
                     <label> Password:
                         <br></br>
-                        <input onChange={(event) => setPassword(event.target.value)} />
+                        <input onChange={(event) => setPassword(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
                     </label>
                     <br></br>
                     <br></br>

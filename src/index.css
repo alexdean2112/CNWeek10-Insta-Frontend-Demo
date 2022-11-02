@@ -11,6 +11,9 @@ body {
 .nav {
   display: flex;
   align-items: center;
+  justify-content:center;
+  position: relative; right: 7vw;
+  position: relative; top: 20vh;
 }
 
 .logo {
@@ -101,7 +104,7 @@ form {
 }
 
 .likebar h2 {
-  margin-right: 37px;
+  margin-right: 23px;
   position: relative; bottom: 20px;
 }
 
@@ -133,4 +136,54 @@ form {
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(233, 189, 189);
+  margin-bottom: 3vh;
+  height: 150px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  position: relative; right: 30px;
+}
+
+.navlinks ul {
+  display: flex;
+  align-items: center;
+}
+.navlinks ul li{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.navlinks ul li a button {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navlinks ul li button {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.profilecontainer {
+  display: flex;
+  justify-content: space-around;
+}
+.deletebutton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2vw;
+}
+
+.updatebutton {
+  margin-bottom: 2vw;
 }
