@@ -3,7 +3,7 @@ import PictureContainer from "./PictureContainer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Homepage = () => {
+const Homepage = ({setter2}) => {
 
     const navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const Homepage = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar setter2={setter2} />
             <PictureContainer />
         </div>
     )

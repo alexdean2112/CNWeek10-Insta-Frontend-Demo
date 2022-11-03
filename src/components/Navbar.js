@@ -5,6 +5,12 @@ const Navbar = ({setter2}) => {
 
     const navigate = useNavigate()
 
+    const logoutHandler = () => {
+        localStorage.removeItem("token")
+        setter2("")
+        navigate("/")
+    }
+
     return (
     <nav>
         <div className="logo">
@@ -14,9 +20,7 @@ const Navbar = ({setter2}) => {
             <ul>
                 <li><Link to="/home"><button>Home</button></Link></li>
                 <li><Link to="/profile"><button>Profile</button></Link></li>
-                <li><button onClick={() => {localStorage.removeItem("token")
-                                            setter2("")
-                                            navigate("/")}}>Log-Out</button></li>
+                <li><button onClick={logoutHandler}>Log-Out</button></li>
             </ul>
         </div>
     </nav>

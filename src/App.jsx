@@ -12,7 +12,7 @@ const [errorMsg, setErrorMsg] = useState()
   return (
     <Routes>
       <Route path="/" element={<Register setter={setLoggedUser} setter2={setErrorMsg} errorMsg={errorMsg}/>} />
-      <Route path="/home" element={<Homepage />} />
+      <Route path="/home" element={<Homepage setter2={setErrorMsg}/>} />
       <Route path="/profile" element={<Profile loggeduser={loggedUser} setter2={setErrorMsg} errorMsg={errorMsg}/>} />
     </Routes>
   )
