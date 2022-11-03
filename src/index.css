@@ -16,6 +16,10 @@ body {
   position: relative; top: 20vh;
 }
 
+.mainlogo {
+  margin: 0 15vw 0 5vw
+}
+
 .logo {
   margin: 0 15vw 0 5vw
 }
@@ -26,6 +30,7 @@ body {
   flex-direction: column;
   height: 50vh;
   align-items: center;
+  position: relative; bottom: 10vh;
 }
 
 .container h1 {
@@ -145,6 +150,7 @@ nav {
   background-color: rgb(233, 189, 189);
   margin-bottom: 3vh;
   height: 150px;
+  width: 100vw;
 }
 
 .navlinks {
@@ -181,9 +187,57 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 2vw;
+  padding: 5px 3px;
+  border-color: rgb(196, 103, 103);
+  position: relative; left: 57px;
+  border-radius: 5px;
 }
 
 .updatebutton {
   margin-bottom: 2vw;
+  padding: 5px 3px;
+  border-color: rgb(196, 103, 103);
+  border-radius: 5px;
+}
+
+.forminput {
+  padding: 3px 3px;
+  border-color: rgb(196, 103, 103);
+  background-color: rgb(233, 189, 189);
+  border-radius: 5px;
+  margin-top: 1vh;
+}
+
+.updateinput {
+  padding: 5px 3px;
+  border-color: rgb(196, 103, 103);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.formbutton {
+  padding: 5px 3px;
+  border-color: rgb(196, 103, 103);
+  border-radius: 5px;
+  background-color: rgb(233, 189, 189);
+  font-size: 15px;
+}
+
+label {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 885px) {
+  .mainlogo {
+    display: none;
+  }
+  .container {
+    position: relative; left: 10vw;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .mainpage {
+    justify-content: center;
+  }
 }

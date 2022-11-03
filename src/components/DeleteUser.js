@@ -22,8 +22,8 @@ const DeleteUsers = ({loggeduser}) => {
     }
 
     return (
-        <div className="deletebutton">
-            <button onClick={clickHandler}>Delete Profile</button>
+        <div >
+            <button className="deletebutton" onClick={clickHandler}>Delete Profile</button>
         </div>
     )
 }

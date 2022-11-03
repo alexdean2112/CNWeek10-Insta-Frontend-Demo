@@ -21,7 +21,7 @@ return (
         <form onSubmit={submitHandler}>
             <label> Update email:
                 <br></br>
-                <input onChange={(event) => setEmail(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
+                <input className="updateinput" onChange={(event) => setEmail(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
             </label>
             <br></br>
             <div>

@@ -21,11 +21,11 @@ return (
         <form onSubmit={submitHandler}>
             <label> Update Password:
                 <br></br>
-                <input onChange={(event) => setPassword(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
+                <input className="updateinput" onChange={(event) => setPassword(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
             </label>
             <br></br>
-            <div className="updatebutton">
-                <button type='submit'>Update Password</button>
+            <div >
+                <button className="updatebutton" type='submit'>Update Password</button>
             </div>
         </form>
     </div>

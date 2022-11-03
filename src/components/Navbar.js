@@ -18,9 +18,9 @@ const Navbar = ({setter2}) => {
         </div>
         <div className="navlinks">
             <ul>
-                <li><Link to="/home"><button>Home</button></Link></li>
-                <li><Link to="/profile"><button>Profile</button></Link></li>
-                <li><button onClick={logoutHandler}>Log-Out</button></li>
+                <li><Link to="/home"><button className="formbutton">Home</button></Link></li>
+                <li><Link to="/profile"><button className="formbutton">Profile</button></Link></li>
+                <li><button className="formbutton" onClick={logoutHandler}>Log-Out</button></li>
             </ul>
         </div>
     </nav>

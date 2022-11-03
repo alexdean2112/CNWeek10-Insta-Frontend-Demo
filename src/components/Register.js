@@ -58,7 +58,7 @@ const loginHandler = async (event) => {
 return (
     <div>
         <div className="nav">
-            <div className="logo">
+            <div className="mainlogo">
                 <img src="/pictures/instagram-logo.png" width="300px" height="300px" alt="logo"/>
             </div>
             <div className="container" >
@@ -67,27 +67,27 @@ return (
                 <form onSubmit={submitHandler}>
                     <label> Username:
                         <br></br>
-                        <input onChange={(event) => setUsername(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")}/>
+                        <input className="forminput" onChange={(event) => setUsername(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")}/>
                     </label>
                     <br></br>
                     <br></br>
 
                     <label> Email:
                         <br></br>
-                        <input onChange={(event) => setEmail(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
+                        <input className="forminput" onChange={(event) => setEmail(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
                     </label>
                     <br></br>
                     <br></br>
 
                     <label> Password:
                         <br></br>
-                        <input onChange={(event) => setPassword(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
+                        <input className="forminput" onChange={(event) => setPassword(event.target.value)} onClick={(event) => setter2("") (event.target.value = "")} />
                     </label>
                     <br></br>
                     <br></br>
                     <div>
-                        <button type='submit'>Create User</button>
-                        <button onClick={loginHandler}>Log-In</button>
+                        <button className="formbutton" type='submit'>Create User</button>
+                        <button className="formbutton" onClick={loginHandler}>Log-In</button>
                     </div>
                 </form>
             </div>
