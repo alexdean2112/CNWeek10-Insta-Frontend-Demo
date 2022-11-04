@@ -40,6 +40,8 @@ const submitHandler = async (event) => {
         localStorage.setItem("token", user.token)
         setter2("")
         navigate("/home")
+    } else {
+        setter2(user.message)
     }
 }
 
