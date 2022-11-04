@@ -1,6 +1,6 @@
 export const createUser = async (username, email, password, setter) => {
     try {
-        const response = await fetch( "http://localhost:5001/createUser", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}createUser`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -19,7 +19,7 @@ export const createUser = async (username, email, password, setter) => {
 
 export const readUsers = async () => {
     try {
-        const response = await fetch( "http://localhost:5001/readUsers", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}readUsers`, {
             method: "GET",
             headers: {"Content-Type": "application/json"},
         })
@@ -34,7 +34,7 @@ export const readUsers = async () => {
 
 export const updateUserPassword = async (username, password, setter2) => {
     try {
-        const response = await fetch( "http://localhost:5001/updatePassword", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}updatePassword`, {
             method: "PUT",
             headers: {"Content-Type": "application/json", "Authorization": localStorage.getItem("token")},
             body: JSON.stringify(
@@ -56,7 +56,7 @@ export const updateUserPassword = async (username, password, setter2) => {
 
 export const updateUserEmail = async (username, email, setter2) => {
     try {
-        const response = await fetch( "http://localhost:5001/updateEmail", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}updateEmail`, {
             method: "PUT",
             headers: {"Content-Type": "application/json", "Authorization": localStorage.getItem("token")},
             body: JSON.stringify(
@@ -78,7 +78,7 @@ export const updateUserEmail = async (username, email, setter2) => {
 
 export const deleteUser = async (username, email, password) => {
     try {
-        const response = await fetch( "http://localhost:5001/deleteUser", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}deleteUser`, {
             method: "DELETE",
             headers: {"Content-Type": "application/json", "Authorization": localStorage.getItem("token")},
             body: JSON.stringify({
@@ -94,7 +94,7 @@ export const deleteUser = async (username, email, password) => {
 
 export const loginUser = async (username, email, password, setter) => {
     try {
-        const response = await fetch( "http://localhost:5001/loginUser", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}loginUser`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

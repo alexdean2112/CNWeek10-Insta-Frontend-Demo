@@ -27,3 +27,4 @@ const Navbar = ({setter2}) => {
 )}
 
 export default Navbar;
+

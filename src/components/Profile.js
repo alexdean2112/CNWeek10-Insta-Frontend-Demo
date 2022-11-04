@@ -54,3 +54,4 @@ const Profile = ({loggeduser, setter2, errorMsg}) => {
 }
 
 export default Profile;
+

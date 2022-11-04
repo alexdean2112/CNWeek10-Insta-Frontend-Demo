@@ -9,7 +9,7 @@ useEffect(() => {
 
 const [photos, setPhotos] = useState([])
     const fetchImages = async () => {
-        const response = await fetch("https://picsum.photos/v2/list?page=2&limit=20")
+        const response = await fetch(`${process.env.REACT_APP_API}?page=2&limit=20`)
         const data = await response.json()
         setPhotos(data)
     }
@@ -25,3 +25,4 @@ const [photos, setPhotos] = useState([])
 )}
 
 export default PictureContainer;
+

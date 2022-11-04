@@ -29,3 +29,4 @@ const DeleteUsers = ({loggeduser}) => {
 }
 
 export default DeleteUsers;
+

@@ -96,3 +96,4 @@ return (
 )}
 
 export default Register;
+

@@ -16,3 +16,4 @@ const Picture = ({item}, {index}) => {
     )}
 
 export default Picture;
+
